@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/84bd6f30c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Portfolio.css" />
+</head>
+<body>
+  <div id="header">
+    <div class="nav">
+      <nav>
+        <img class="logo" src="../Pictures/logo.png" alt="logo" />
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#connect">Contact</a></li>
+          <li><a href="#education1">Education</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <span class="a">Web</span>&nbsp;<span class="b">Developer</span>
+        <h1>Hi I'm <span>Musthak</span><br />A Jn.Web developer</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-column-1">
+          <img src="../Pictures/about.jpg" alt="about" />
+        </div>
+        <div class="about-column-2">
+          <h1 class="subtitle">About Me</h1>
+          <p>
+            My name is Muhammed Musthak, and I am currently pursuing my BCA degree at a well-known college.
+            I am passionate about technology and actively learning web development skills such as HTML, CSS, and JavaScript.
+            I enjoy building websites and exploring creative solutions for modern web design challenges.
+            My academic journey drives me to constantly improve and experiment with new coding projects.
+            I am eager to apply my knowledge to real-world problems, collaborate, and grow as a developer.
+            Outside of coding, I enjoy connecting with others, sharing ideas, and exploring new trends in web technology
+          </p>
+          <div class="tab-title">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web development</span><br />Developing Web/App interfaces</li>
+              <li><span>Python development</span><br />Develop python Based Apps/Web</li>
+              <li><span>Web Security</span><br />Analyze and Rectify Web Security Flows</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Front-end Developer</span><br />Worked as a Front end Developer in My College Project called Yentrance</li>
+              <li><span>Lead Designer</span><br />Worked as a Lead Designer in a Startup company called WorkDone</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Bachelor of Computer Application</span><br />2023-Ongoing Studying for BCA in Yenepoya University</li>
+              <li><span>Full stack Developer</span><br />2023-Ongoing Getting trained in Fullstack development from Xybron Academy</li>
+              <li><span>Higher Secondary Education</span><br />2021-2023 Done Higher secondary Education from GHSS Agatti</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Development</h2>
+          <p>
+            I design and develop modern, responsive websites tailored to meet the unique needs of each client. From clean layouts and SEO optimization to robust backend functionality, my web development service ensures your online presence stands out. I use the latest technologies and best practices to deliver fast, secure, and scalable web solutions that grow with your business.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-android"></i>
+          <h2>App Development</h2>
+          <p>
+            My app development service focuses on building user-friendly mobile and web applications that provide seamless functionality and engaging user experiences. Whether you need a personal app or a business solution, I can bring your ideas to life across Android, iOS, and cross-platform environments. I prioritize practical features, intuitive design, and smooth performance to help you reach your goals with every app.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-file"></i>
+          <h2>Resume and CV Building</h2>
+          <p>
+            I offer personalized Resume and CV Building to help you present your skills, achievements, and aspirations in the best possible light. My service covers professional formatting, powerful wording, and strategic highlights to impress recruiters. Whether you’re a student or an experienced professional, I create resumes and CVs that are clear, compelling, and tailored for success in today’s competitive job market.
+          </p>
+          <a href="#">learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="connect">
+    <div class="container">
+      <h1 class="sub-title">Let's Connect</h1>
+      <p class="connect-tag">Follow me on socials or drop a message anytime.</p>
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/" target="_blank" aria-label="GitHub" class="gh">
+            <i class="fa-brands fa-github"></i>
+            <div class="social-text">
+              <span class="social-name">GitHub</span>
+              <small class="social-desc">Version control, open-source, and where I ship code.</small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="www.linkedin.com/in/muhammad-musthak-k-866542355" target="_blank" aria-label="LinkedIn" class="li">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <div class="social-text">
+              <span class="social-name">LinkedIn</span>
+              <small class="social-desc">Professional network — resume, roles, and collaborations.</small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="ig">
+            <i class="fa-brands fa-instagram"></i>
+            <div class="social-text">
+              <span class="social-name">Instagram</span>
+              <small class="social-desc">Snapshots of builds, designs, and a bit of life.</small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/" target="_blank" aria-label="X" class="x">
+            <i class="fa-brands fa-x-twitter"></i>
+            <div class="social-text">
+              <span class="social-name">X</span>
+              <small class="social-desc">Quick thoughts, tech threads, and product updates.</small>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:musthakk8281@gmail.com" aria-label="Email" class="mail">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="social-text">
+              <span class="social-name">Email</span>
+              <small class="social-desc">For inquiries, projects, or just to say hi.</small>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education1">
+    <div class="edu-hero">
+      <div class="edu-hero-content">
+        <h1 class="sub-title">Education</h1>
+        <p class="edu-tag">A quick look at my academic journey</p>
+      </div>
+    </div>
+
+    <div class="container edu-cards">
+      <article class="edu-card">
+        <a class="edu-media" href="https://www.yenepoya.edu.in/" target="_blank" rel="noopener" aria-label="Visit Yenepoya University website">
+          <img src="../Pictures/yenepoya.jpg" alt="Yenepoya University" />
+        </a>
+        <div class="edu-content">
+          <h3 class="edu-name">
+            <a href="https://www.yenepoya.edu.in/" target="_blank" rel="noopener">Yenepoya University</a>
+          </h3>
+          <p class="edu-degree">BCA (Bachelor of Computer Application), Computer Software and Media Applications</p>
+          <p class="edu-duration">Oct 2023 - Jul 2026</p>
+          <p class="edu-highlights">Skills: Problem Solving, Communication, Teamwork, Presentation, Time Management, Programming Fundamentals, Web Development</p>
+        </div>
+      </article>
+
+      <article class="edu-card">
+        <a class="edu-media" href="https://www.india.gov.in/" target="_blank" rel="noopener" aria-label="Visit Government of India portal">
+          <img src="../Pictures/ghss.jpg" alt="GHSS Agatti" />
+        </a>
+        <div class="edu-content">
+          <h3 class="edu-name">
+            <a href="https://lakedn.utl.gov.in/index.php/site/SchoolPage/Govt.%20Senior%20Secondary%20School,%20Agatti/1021" target="_blank" rel="noopener">GHSS Agatti</a>
+          </h3>
+          <p class="edu-degree">Science</p>
+          <p class="edu-duration">Aug 2021 - Feb 2023</p>
+          <p class="edu-highlights">Grade: 78% — Activities and societies: Shot put throw</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="feedback">
+    <div class="container">
+      <h1 class="sub-title">Feedback</h1>
+      <p class="feedback-tag">Share your thoughts with me — I read every message.</p>
+      <form id="feedbackForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Muhammmed" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="form-field">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Musthak" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="email">Gmail</label>
+            <input type="email" id="email" name="email" placeholder="you@gmail.com" required />
+            <small class="error" aria-live="polite"></small>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="message">Write something</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
+        <p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>Congrats! Your feedback has been submitted.</p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    let tablinks = document.getElementsByClassName('tab-links');
+    let tabcontents = document.getElementsByClassName('tab-contents');
+    function opentab(tabname) {
+      for (tablink of tablinks) {
+        tablink.classList.remove('active-link');
+      }
+      for (tabcontent of tabcontents) {
+        tabcontent.classList.remove('active-tab');
+      }
+      event.currentTarget.classList.add('active-link');
+      document.getElementById(tabname).classList.add('active-tab');
+    }
+
+    function activateTabFromHash() {
+      const hash = window.location.hash.replace('#', '');
+      if (!hash) return;
+      const validTabs = ['skills', 'experience', 'education'];
+      if (validTabs.includes(hash)) {
+        const about = document.getElementById('about');
+        if (about) {
+          about.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        for (let tl of tablinks) {
+          tl.classList.remove('active-link');
+        }
+        for (let tc of tabcontents) {
+          tc.classList.remove('active-tab');
+        }
+        const targetTab = document.getElementById(hash);
+        if (targetTab) {
+          targetTab.classList.add('active-tab');
+        }
+        for (let tl of tablinks) {
+          if (tl.textContent.trim().toLowerCase() === hash) {
+            tl.classList.add('active-link');
+          }
+        }
+      }
+    }
+    window.addEventListener('hashchange', activateTabFromHash);
+    window.addEventListener('DOMContentLoaded', activateTabFromHash);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('feedbackForm');
+      if (!form) return;
+      const first = form.querySelector('#firstName');
+      const last = form.querySelector('#lastName');
+      const email = form.querySelector('#email');
+      const message = form.querySelector('#message');
+      const success = document.getElementById('formSuccess');
+
+      const setError = (input, msg) => {
+        const field = input.closest('.form-field');
+        const small = field.querySelector('.error');
+        small.textContent = msg || '';
+        if (msg) {
+          input.setAttribute('aria-invalid', 'true');
+        } else {
+          input.removeAttribute('aria-invalid');
+        }
+      };
+
+      const isEmail = (val) =>
+        /^[\w.!#$%&’*+/=?`{|}~^-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(val);
+
+      const validate = () => {
+        let ok = true;
+        if (!first.value.trim()) {
+          setError(first, 'First name is required');
+          ok = false;
+        } else {
+          setError(first, '');
+        }
+        if (!last.value.trim()) {
+          setError(last, 'Last name is required');
+          ok = false;
+        } else {
+          setError(last, '');
+        }
+        if (!email.value.trim()) {
+          setError(email, 'Email is required');
+          ok = false;
+        } else if (!isEmail(email.value.trim())) {
+          setError(email, 'Please enter a valid email');
+          ok = false;
+        } else {
+          setError(email, '');
+        }
+        if (!message.value.trim() || message.value.trim().length < 5) {
+          setError(message, 'Please write at least 5 characters');
+          ok = false;
+        } else {
+          setError(message, '');
+        }
+        return ok;
+      };
+
+      form.addEventListener('input', (e) => {
+        const t = e.target;
+        if (['INPUT', 'TEXTAREA'].includes(t.tagName)) {
+          validate();
+        }
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        success.hidden = true;
+        if (!validate()) {
+          return;
+        }
+        form.reset();
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+  </script>
+</body>
+</html>
