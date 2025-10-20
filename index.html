@@ -150,7 +150,7 @@
           </a>
         </li>
         <li>
-          <a href="mailto:musthakk8281@gmail.com" aria-label="Email" class="mail">
+          <a href="mailto:musthakk8281@gmail.com" aria-label="Email" class="mail" onclick="copyEmail(event)">
             <i class="fa-solid fa-envelope"></i>
             <div class="social-text">
               <span class="social-name">Email</span>
@@ -280,6 +280,25 @@
     }
     window.addEventListener('hashchange', activateTabFromHash);
     window.addEventListener('DOMContentLoaded', activateTabFromHash);
+
+    // Email copy functionality
+    function copyEmail(event) {
+      const email = 'musthakk8281@gmail.com';
+      
+      // Try to copy to clipboard
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+          alert('Email copied to clipboard: ' + email);
+          event.preventDefault();
+        }).catch(() => {
+          // If clipboard fails, show email in alert
+          alert('Email: ' + email + '\nClick OK to continue to mail client.');
+        });
+      } else {
+        // Fallback for older browsers
+        alert('Email: ' + email + '\nClick OK to continue to mail client.');
+      }
+    }
 
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.getElementById('feedbackForm');
