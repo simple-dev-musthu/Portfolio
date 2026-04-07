@@ -3,118 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/84bd6f30c7.js" crossorigin="anonymous"></script>
+  <title>Musthak — Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="Portfolio.css" />
 </head>
 <body>
-  <div id="header">
-    <div class="nav">
-      <nav>
-        <img class="logo" src="Pictures/logo.png" alt="logo" />
-        <ul>
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Service</a></li>
-          <li><a href="#connect">Contact</a></li>
-          <li><a href="#education1">Education</a></li>
-          <li><a href="#feedback">Feedback</a></li>
-        </ul>
-      </nav>
-      <div class="header-text">
-        <span class="a">Web</span>&nbsp;<span class="b">Developer</span>
-        <h1>Hi I'm <span>Musthak</span><br />A Jn.Web developer</h1>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Cursor glow -->
+  <div id="cursor-glow"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#header" class="nav-logo">
+        <img src="Pictures/logo.png" alt="Musthak Logo" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#header" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#connect" class="nav-link">Contact</a></li>
+        <li><a href="#education1" class="nav-link">Education</a></li>
+        <li><a href="#feedback" class="nav-link">Feedback</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="header">
+    <div class="hero-bg">
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-gradient"></div>
+      <img class="hero-img" src="Pictures/pc.jpg" alt="Hero background" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up" style="--delay:0s">
+        <span class="badge-dot"></span> Available for work
+      </div>
+      <p class="hero-label reveal-up" style="--delay:.1s">
+        <span class="hero-label-web">Web</span>&nbsp;<span class="hero-label-dev">Developer</span>
+      </p>
+      <h1 class="hero-title reveal-up" style="--delay:.2s">
+        Hi, I'm <span class="highlight-name">Musthak</span>
+      </h1>
+      <p class="hero-sub reveal-up" style="--delay:.3s">
+        <span id="typed-text"></span><span class="typed-cursor">|</span>
+      </p>
+      <div class="hero-actions reveal-up" style="--delay:.45s">
+        <a href="#connect" class="btn-primary">Let's Connect <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#about" class="btn-ghost">View Work</a>
       </div>
     </div>
-  </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    </a>
+  </section>
 
-  <div id="about">
+  <!-- About Section -->
+  <section id="about">
     <div class="container">
-      <div class="row">
-        <div class="about-column-1">
-          <img src="Pictures/about.jpg" alt="about" />
+      <div class="section-label reveal-up">About Me</div>
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <div class="about-img-glow"></div>
+          <img src="Pictures/about.jpg" alt="Musthak" class="about-img" />
+          <div class="about-img-badge">
+            <i class="fa-solid fa-code"></i>
+            <span>Junior Dev</span>
+          </div>
         </div>
-        <div class="about-column-2">
-          <h1 class="subtitle">About Me</h1>
-          <p>
-            My name is Muhammed Musthak, and I am currently pursuing my BCA degree at a well-known college.
-            I am passionate about technology and actively learning web development skills such as HTML, CSS, and JavaScript.
-            I enjoy building websites and exploring creative solutions for modern web design challenges.
-            My academic journey drives me to constantly improve and experiment with new coding projects.
-            I am eager to apply my knowledge to real-world problems, collaborate, and grow as a developer.
-            Outside of coding, I enjoy connecting with others, sharing ideas, and exploring new trends in web technology
+        <div class="about-content reveal-right">
+          <h2 class="section-title">Crafting <span>Digital</span> Experiences</h2>
+          <p class="about-desc">
+            My name is Muhammed Musthak, and I'm a passionate BCA student at Yenepoya University. 
+            I love building modern, responsive websites and exploring creative solutions for real-world challenges. 
+            I'm always eager to learn, collaborate, and grow as a developer.
           </p>
-          <div class="tab-title">
-            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-            <p class="tab-links" onclick="opentab('education')">Education</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="2">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="10">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="3">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Skills Mastered</span>
+            </div>
           </div>
-          <div class="tab-contents active-tab" id="skills">
-            <ul>
-              <li><span>Web development</span><br />Developing Web/App interfaces</li>
-              <li><span>Python development</span><br />Develop python Based Apps/Web</li>
-              <li><span>Web Security</span><br />Analyze and Rectify Web Security Flows</li>
+          <div class="tab-nav">
+            <button class="tab-btn active-tab-btn" onclick="opentab('skills', this)">Skills</button>
+            <button class="tab-btn" onclick="opentab('experience', this)">Experience</button>
+            <button class="tab-btn" onclick="opentab('education', this)">Education</button>
+          </div>
+          <div class="tab-panel active-panel" id="skills">
+            <ul class="tab-list">
+              <li><span class="tab-tag">Web Development</span> — Developing modern, responsive Web & App interfaces</li>
+              <li><span class="tab-tag">Python Development</span> — Building Python-based applications & automation</li>
+              <li><span class="tab-tag">Web Security</span> — Analyzing & rectifying security vulnerabilities</li>
             </ul>
           </div>
-          <div class="tab-contents" id="experience">
-            <ul>
-              <li><span>Front-end Developer</span><br />Worked as a Front end Developer in My College Project called Yentrance</li>
-              <li><span>Lead Designer</span><br />Worked as a Lead Designer in a Startup company called WorkDone</li>
+          <div class="tab-panel" id="experience">
+            <ul class="tab-list">
+              <li><span class="tab-tag">Front-end Developer</span> — Worked on college project "Yentrance"</li>
+              <li><span class="tab-tag">Lead Designer</span> — Lead Designer at startup "WorkDone"</li>
             </ul>
           </div>
-          <div class="tab-contents" id="education">
-            <ul>
-              <li><span>Bachelor of Computer Application</span><br />2023-Ongoing Studying for BCA in Yenepoya University</li>
-              <li><span>Full stack Developer</span><br />2023-Ongoing Getting trained in Fullstack development from Xybron Academy</li>
-              <li><span>Higher Secondary Education</span><br />2021-2023 Done Higher secondary Education from GHSS Agatti</li>
+          <div class="tab-panel" id="education">
+            <ul class="tab-list">
+              <li><span class="tab-tag">BCA — Yenepoya University</span> — 2023–Ongoing</li>
+              <li><span class="tab-tag">Full Stack Training</span> — Xybron Academy, 2023–Ongoing</li>
+              <li><span class="tab-tag">Higher Secondary</span> — GHSS Agatti, 2021–2023</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="services">
+  <!-- Services Section -->
+  <section id="services">
     <div class="container">
-      <h1 class="sub-title">My Services</h1>
-      <div class="services-list">
-        <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Web Development</h2>
-          <p>
-            I design and develop modern, responsive websites tailored to meet the unique needs of each client. From clean layouts and SEO optimization to robust backend functionality, my web development service ensures your online presence stands out. I use the latest technologies and best practices to deliver fast, secure, and scalable web solutions that grow with your business.
-          </p>
-          <a href="#">learn more</a>
+      <div class="section-label reveal-up">What I Do</div>
+      <h2 class="section-title reveal-up">My <span>Services</span></h2>
+      <div class="services-grid">
+        <div class="service-card reveal-up" style="--delay:0s">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>Web Development</h3>
+          <p>Modern, responsive websites tailored to meet unique client needs. From clean layouts to robust backend functionality — fast, secure, and scalable.</p>
+          <a href="#connect" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
         </div>
-        <div>
-          <i class="fa-brands fa-android"></i>
-          <h2>App Development</h2>
-          <p>
-            My app development service focuses on building user-friendly mobile and web applications that provide seamless functionality and engaging user experiences. Whether you need a personal app or a business solution, I can bring your ideas to life across Android, iOS, and cross-platform environments. I prioritize practical features, intuitive design, and smooth performance to help you reach your goals with every app.
-          </p>
-          <a href="#">learn more</a>
+        <div class="service-card reveal-up" style="--delay:.1s">
+          <div class="service-icon-wrap">
+            <i class="fa-brands fa-android"></i>
+          </div>
+          <h3>App Development</h3>
+          <p>User-friendly mobile and web applications with seamless functionality across Android, iOS, and cross-platform environments. Intuitive design first.</p>
+          <a href="#connect" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
         </div>
-        <div>
-          <i class="fa-solid fa-file"></i>
-          <h2>Resume and CV Building</h2>
-          <p>
-            I offer personalized Resume and CV Building to help you present your skills, achievements, and aspirations in the best possible light. My service covers professional formatting, powerful wording, and strategic highlights to impress recruiters. Whether you’re a student or an experienced professional, I create resumes and CVs that are clear, compelling, and tailored for success in today’s competitive job market.
-          </p>
-          <a href="#">learn more</a>
+        <div class="service-card reveal-up" style="--delay:.2s">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-file-lines"></i>
+          </div>
+          <h3>Resume & CV Building</h3>
+          <p>Personalized, professionally formatted resumes and CVs that highlight your best achievements. Clear, compelling, and tailored for today's competitive market.</p>
+          <a href="#connect" class="service-link">Explore <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="card-glow"></div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
+  <!-- Connect Section -->
   <section id="connect">
     <div class="container">
-      <h1 class="sub-title">Let's Connect</h1>
-      <p class="connect-tag">Follow me on socials or drop a message anytime.</p>
+      <div class="section-label reveal-up">Get In Touch</div>
+      <h2 class="section-title reveal-up">Let's <span>Connect</span></h2>
+      <p class="section-sub reveal-up">Follow me on socials or drop a message anytime.</p>
       <ul class="socials">
-        <li>
-          <a href="https://github.com/simple-dev-musthu" target="_blank" aria-label="GitHub" class="gh">
+        <li class="reveal-up" style="--delay:0s">
+          <a href="https://github.com/simple-dev-musthu" target="_blank" aria-label="GitHub" class="social-card gh">
             <i class="fa-brands fa-github"></i>
             <div class="social-text">
               <span class="social-name">GitHub</span>
@@ -122,8 +183,8 @@
             </div>
           </a>
         </li>
-        <li>
-          <a href="https://linkedin.com/in/muhammad-musthak-k-866542355/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="li">
+        <li class="reveal-up" style="--delay:.08s">
+          <a href="https://linkedin.com/in/muhammad-musthak-k-866542355/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-card li">
             <i class="fa-brands fa-linkedin-in"></i>
             <div class="social-text">
               <span class="social-name">LinkedIn</span>
@@ -131,8 +192,8 @@
             </div>
           </a>
         </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="ig">
+        <li class="reveal-up" style="--delay:.16s">
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="social-card ig">
             <i class="fa-brands fa-instagram"></i>
             <div class="social-text">
               <span class="social-name">Instagram</span>
@@ -140,17 +201,17 @@
             </div>
           </a>
         </li>
-        <li>
-          <a href="https://x.com/" target="_blank" aria-label="X" class="x">
+        <li class="reveal-up" style="--delay:.24s">
+          <a href="https://x.com/" target="_blank" aria-label="X" class="social-card xc">
             <i class="fa-brands fa-x-twitter"></i>
             <div class="social-text">
-              <span class="social-name">X</span>
+              <span class="social-name">X (Twitter)</span>
               <small class="social-desc">Quick thoughts, tech threads, and product updates.</small>
             </div>
           </a>
         </li>
-        <li>
-          <a href="mailto:musthakk8281@gmail.com" aria-label="Email" class="mail" onclick="copyEmail(event)">
+        <li class="reveal-up" style="--delay:.32s">
+          <a href="mailto:musthakk8281@gmail.com" aria-label="Email" class="social-card mail" onclick="copyEmail(event)">
             <i class="fa-solid fa-envelope"></i>
             <div class="social-text">
               <span class="social-name">Email</span>
@@ -162,212 +223,270 @@
     </div>
   </section>
 
+  <!-- Education Section -->
   <section id="education1">
     <div class="edu-hero">
-      <div class="edu-hero-content">
-        <h1 class="sub-title">Education</h1>
-        <p class="edu-tag">A quick look at my academic journey</p>
+      <div class="edu-hero-overlay"></div>
+      <div class="edu-hero-content reveal-up">
+        <div class="section-label">My Journey</div>
+        <h2 class="section-title">Education</h2>
+        <p class="section-sub">A quick look at my academic journey</p>
       </div>
     </div>
-
-    <div class="container edu-cards">
-      <article class="edu-card">
-        <a class="edu-media" href="https://www.yenepoya.edu.in/" target="_blank" rel="noopener" aria-label="Visit Yenepoya University website">
-          <img src="Pictures/yenepoya.jpg" alt="Yenepoya University" />
-        </a>
-        <div class="edu-content">
-          <h3 class="edu-name">
-            <a href="https://www.yenepoya.edu.in/" target="_blank" rel="noopener">Yenepoya University</a>
-          </h3>
-          <p class="edu-degree">BCA (Bachelor of Computer Application), Computer Software and Media Applications</p>
-          <p class="edu-duration">Oct 2023 - Jul 2026</p>
-          <p class="edu-highlights">Skills: Problem Solving, Communication, Teamwork, Presentation, Time Management, Programming Fundamentals, Web Development</p>
-        </div>
-      </article>
-
-      <article class="edu-card">
-        <a class="edu-media" href="https://www.india.gov.in/" target="_blank" rel="noopener" aria-label="Visit Government of India portal">
-          <img src="Pictures/ghss.jpg" alt="GHSS Agatti" />
-        </a>
-        <div class="edu-content">
-          <h3 class="edu-name">
-            <a href="https://lakedn.utl.gov.in/index.php/site/SchoolPage/Govt.%20Senior%20Secondary%20School,%20Agatti/1021" target="_blank" rel="noopener">GHSS Agatti</a>
-          </h3>
-          <p class="edu-degree">Science</p>
-          <p class="edu-duration">Aug 2021 - Feb 2023</p>
-          <p class="edu-highlights">Grade: 78% — Activities and societies: Shot put throw</p>
-        </div>
-      </article>
+    <div class="container">
+      <div class="edu-cards">
+        <article class="edu-card reveal-left">
+          <a class="edu-media" href="https://www.yenepoya.edu.in/" target="_blank" rel="noopener" aria-label="Visit Yenepoya University">
+            <img src="Pictures/yenepoya.jpg" alt="Yenepoya University" />
+            <div class="edu-media-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+          </a>
+          <div class="edu-content">
+            <div class="edu-badge">Current</div>
+            <h3 class="edu-name"><a href="https://www.yenepoya.edu.in/" target="_blank" rel="noopener">Yenepoya University</a></h3>
+            <p class="edu-degree">BCA — Computer Software & Media Applications</p>
+            <p class="edu-duration"><i class="fa-regular fa-calendar"></i> Oct 2023 – Jul 2026</p>
+            <p class="edu-highlights">Problem Solving · Web Development · Teamwork · Communication</p>
+          </div>
+        </article>
+        <article class="edu-card reveal-right">
+          <a class="edu-media" href="https://lakedn.utl.gov.in/index.php/site/SchoolPage/Govt.%20Senior%20Secondary%20School,%20Agatti/1021" target="_blank" rel="noopener" aria-label="Visit GHSS Agatti">
+            <img src="Pictures/ghss.jpg" alt="GHSS Agatti" />
+            <div class="edu-media-overlay"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+          </a>
+          <div class="edu-content">
+            <div class="edu-badge completed">Completed</div>
+            <h3 class="edu-name"><a href="https://lakedn.utl.gov.in/index.php/site/SchoolPage/Govt.%20Senior%20Secondary%20School,%20Agatti/1021" target="_blank" rel="noopener">GHSS Agatti</a></h3>
+            <p class="edu-degree">Higher Secondary — Science</p>
+            <p class="edu-duration"><i class="fa-regular fa-calendar"></i> Aug 2021 – Feb 2023</p>
+            <p class="edu-highlights">Grade: 78% &mdash; Shot put athlete</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
+  <!-- Feedback Section -->
   <section id="feedback">
     <div class="container">
-      <h1 class="sub-title">Feedback</h1>
-      <p class="feedback-tag">Share your thoughts with me — I read every message.</p>
-      <form id="feedbackForm" novalidate>
+      <div class="section-label reveal-up">Say Hello</div>
+      <h2 class="section-title reveal-up">Send <span>Feedback</span></h2>
+      <p class="section-sub reveal-up">Share your thoughts — I read every message.</p>
+      <form id="feedbackForm" class="feedback-form reveal-up" novalidate>
         <div class="form-row">
           <div class="form-field">
             <label for="firstName">First name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Muhammmed" required />
+            <input type="text" id="firstName" name="firstName" placeholder="Muhammed" required autocomplete="given-name" />
             <small class="error" aria-live="polite"></small>
           </div>
           <div class="form-field">
             <label for="lastName">Last name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Musthak" required />
+            <input type="text" id="lastName" name="lastName" placeholder="Musthak" required autocomplete="family-name" />
             <small class="error" aria-live="polite"></small>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field full">
-            <label for="email">Gmail</label>
-            <input type="email" id="email" name="email" placeholder="you@gmail.com" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" />
             <small class="error" aria-live="polite"></small>
           </div>
         </div>
         <div class="form-row">
           <div class="form-field full">
-            <label for="message">Write something</label>
+            <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
             <small class="error" aria-live="polite"></small>
           </div>
         </div>
-        <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
-        <p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>Congrats! Your feedback has been submitted.</p>
+        <button type="submit" class="btn-submit">
+          <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+          <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
+        </p>
       </form>
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p>Designed &amp; built by <span>Muhammed Musthak</span></p>
+      <p class="footer-sub">© 2024 All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive"></div>
+
   <script>
-    let tablinks = document.getElementsByClassName('tab-links');
-    let tabcontents = document.getElementsByClassName('tab-contents');
-    function opentab(tabname) {
-      for (tablink of tablinks) {
-        tablink.classList.remove('active-link');
+    // ─── Scroll Progress ───────────────────────────────────────────────────────
+    const progress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      progress.style.width = scrolled + '%';
+    }, { passive: true });
+
+    // ─── Navbar scroll style ───────────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ─── Cursor Glow ───────────────────────────────────────────────────────────
+    const glow = document.getElementById('cursor-glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top  = e.clientY + 'px';
+    });
+
+    // ─── Hamburger Menu ────────────────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ─── Typed Text ───────────────────────────────────────────────────────────
+    const phrases = ['A Junior Web Developer.', 'A Creative Designer.', 'A Python Enthusiast.', 'A Problem Solver.'];
+    let pi = 0, ci = 0, deleting = false;
+    const typedEl = document.getElementById('typed-text');
+    function type() {
+      const phrase = phrases[pi];
+      if (!deleting) {
+        typedEl.textContent = phrase.slice(0, ++ci);
+        if (ci === phrase.length) { deleting = true; return setTimeout(type, 1800); }
+      } else {
+        typedEl.textContent = phrase.slice(0, --ci);
+        if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
       }
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove('active-tab');
-      }
-      event.currentTarget.classList.add('active-link');
-      document.getElementById(tabname).classList.add('active-tab');
+      setTimeout(type, deleting ? 60 : 90);
+    }
+    setTimeout(type, 900);
+
+    // ─── Particles ────────────────────────────────────────────────────────────
+    const particlesEl = document.getElementById('particles');
+    for (let i = 0; i < 38; i++) {
+      const p = document.createElement('span');
+      p.className = 'particle';
+      p.style.cssText = `
+        left:${Math.random()*100}%;
+        top:${Math.random()*100}%;
+        width:${2 + Math.random()*3}px;
+        height:${2 + Math.random()*3}px;
+        animation-delay:${Math.random()*8}s;
+        animation-duration:${6 + Math.random()*10}s;
+        opacity:${.2 + Math.random()*.5};
+      `;
+      particlesEl.appendChild(p);
     }
 
-    function activateTabFromHash() {
-      const hash = window.location.hash.replace('#', '');
-      if (!hash) return;
-      const validTabs = ['skills', 'experience', 'education'];
-      if (validTabs.includes(hash)) {
-        const about = document.getElementById('about');
-        if (about) {
-          about.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        for (let tl of tablinks) {
-          tl.classList.remove('active-link');
-        }
-        for (let tc of tabcontents) {
-          tc.classList.remove('active-tab');
-        }
-        const targetTab = document.getElementById(hash);
-        if (targetTab) {
-          targetTab.classList.add('active-tab');
-        }
-        for (let tl of tablinks) {
-          if (tl.textContent.trim().toLowerCase() === hash) {
-            tl.classList.add('active-link');
-          }
-        }
-      }
+    // ─── Tabs ──────────────────────────────────────────────────────────────────
+    function opentab(tabname, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab-btn'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active-panel'));
+      (btn || document.querySelector(`.tab-btn[onclick*="${tabname}"]`)).classList.add('active-tab-btn');
+      document.getElementById(tabname).classList.add('active-panel');
     }
-    window.addEventListener('hashchange', activateTabFromHash);
-    window.addEventListener('DOMContentLoaded', activateTabFromHash);
 
-    // Email copy functionality
+    // ─── Scroll Reveal ────────────────────────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right').forEach(el => revealObserver.observe(el));
+
+    // ─── Counter Animation ────────────────────────────────────────────────────
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.querySelectorAll('.stat-num').forEach(el => {
+          const target = +el.dataset.target;
+          let cur = 0;
+          const step = target / 40;
+          const timer = setInterval(() => {
+            cur = Math.min(cur + step, target);
+            el.textContent = Math.round(cur);
+            if (cur >= target) clearInterval(timer);
+          }, 40);
+        });
+        counterObserver.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    const statsSection = document.querySelector('.about-stats');
+    if (statsSection) counterObserver.observe(statsSection);
+
+    // ─── Email copy ───────────────────────────────────────────────────────────
     function copyEmail(event) {
       const email = 'musthakk8281@gmail.com';
-      
-      // Try to copy to clipboard
+      event.preventDefault();
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(email).then(() => {
-          alert('Email copied to clipboard: ' + email);
-          event.preventDefault();
-        }).catch(() => {
-          // If clipboard fails, show email in alert
-          alert('Email: ' + email + '\nClick OK to continue to mail client.');
-        });
+        navigator.clipboard.writeText(email).then(() => showToast('Email copied: ' + email));
       } else {
-        // Fallback for older browsers
-        alert('Email: ' + email + '\nClick OK to continue to mail client.');
+        showToast('Email: ' + email);
       }
     }
 
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+
+    // ─── Form Validation ──────────────────────────────────────────────────────
     document.addEventListener('DOMContentLoaded', function () {
-      const form = document.getElementById('feedbackForm');
+      const form    = document.getElementById('feedbackForm');
       if (!form) return;
-      const first = form.querySelector('#firstName');
-      const last = form.querySelector('#lastName');
-      const email = form.querySelector('#email');
+      const first   = form.querySelector('#firstName');
+      const last    = form.querySelector('#lastName');
+      const email   = form.querySelector('#email');
       const message = form.querySelector('#message');
       const success = document.getElementById('formSuccess');
 
       const setError = (input, msg) => {
         const field = input.closest('.form-field');
-        const small = field.querySelector('.error');
-        small.textContent = msg || '';
-        if (msg) {
-          input.setAttribute('aria-invalid', 'true');
-        } else {
-          input.removeAttribute('aria-invalid');
-        }
+        field.querySelector('.error').textContent = msg || '';
+        msg ? input.setAttribute('aria-invalid', 'true') : input.removeAttribute('aria-invalid');
+        field.classList.toggle('has-error', !!msg);
       };
 
-      const isEmail = (val) =>
-        /^[\w.!#$%&’*+/=?`{|}~^-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(val);
+      const isEmail = v => /^[\w.!#$%&'*+/=?`{|}~^-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(v);
 
       const validate = () => {
         let ok = true;
-        if (!first.value.trim()) {
-          setError(first, 'First name is required');
-          ok = false;
-        } else {
-          setError(first, '');
-        }
-        if (!last.value.trim()) {
-          setError(last, 'Last name is required');
-          ok = false;
-        } else {
-          setError(last, '');
-        }
-        if (!email.value.trim()) {
-          setError(email, 'Email is required');
-          ok = false;
-        } else if (!isEmail(email.value.trim())) {
-          setError(email, 'Please enter a valid email');
-          ok = false;
-        } else {
-          setError(email, '');
-        }
+        if (!first.value.trim())   { setError(first, 'First name is required'); ok = false; } else setError(first, '');
+        if (!last.value.trim())    { setError(last,  'Last name is required');  ok = false; } else setError(last,  '');
+        if (!email.value.trim())   { setError(email, 'Email is required');      ok = false; }
+        else if (!isEmail(email.value.trim())) { setError(email, 'Please enter a valid email'); ok = false; }
+        else setError(email, '');
         if (!message.value.trim() || message.value.trim().length < 5) {
-          setError(message, 'Please write at least 5 characters');
-          ok = false;
-        } else {
-          setError(message, '');
-        }
+          setError(message, 'Please write at least 5 characters'); ok = false;
+        } else setError(message, '');
         return ok;
       };
 
-      form.addEventListener('input', (e) => {
-        const t = e.target;
-        if (['INPUT', 'TEXTAREA'].includes(t.tagName)) {
-          validate();
-        }
+      form.addEventListener('input', e => {
+        if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) validate();
       });
 
-      form.addEventListener('submit', function (e) {
+      form.addEventListener('submit', e => {
         e.preventDefault();
         success.hidden = true;
-        if (!validate()) {
-          return;
-        }
+        if (!validate()) return;
         form.reset();
         success.hidden = false;
         success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
