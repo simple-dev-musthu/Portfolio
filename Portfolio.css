@@ -151,7 +151,7 @@ a { text-decoration: none; color: inherit; }
   gap: 20px;
 }
 
-.nav-logo img { height: 38px; filter: brightness(1.1); }
+.nav-logo img { height: 46px; filter: brightness(1.1); }
 
 .nav-links {
   list-style: none;
