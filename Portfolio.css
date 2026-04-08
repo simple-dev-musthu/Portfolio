@@ -447,7 +447,6 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 600px) {
   .hero-content { margin: 0; padding-top: calc(var(--nav-h) + 24px); }
-  .hero-img { object-position: 70% center; }
   .hero-actions { gap: 10px; }
   .btn-primary, .btn-ghost { padding: 12px 22px; font-size: .9rem; }
 }
