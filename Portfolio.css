@@ -515,7 +515,7 @@ a { text-decoration: none; color: inherit; }
 
 @media (max-width: 860px) {
   .about-img { aspect-ratio: 16/9; max-height: 320px; object-position: top; }
-  .about-img-badge { right: 12px; bottom: -12px; }
+  .about-img-badge { right: 12px; bottom: 12px; }
 }
 
 .about-desc {
@@ -1295,3 +1295,141 @@ a { text-decoration: none; color: inherit; }
 
 /* ─── Selection ─────────────────────────────────────────────────── */
 ::selection { background: rgba(225,29,72,.3); color: var(--text); }
+
+/* ─── Tech Stack Section ─────────────────────────────────────────── */
+#techstack {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  cursor: default;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-h);
+  box-shadow: 0 16px 40px rgba(0,0,0,.4);
+}
+
+.tech-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.tech-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.tech-type {
+  font-size: .72rem;
+  color: var(--text-dim);
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+
+/* ─── Comprehensive Mobile Responsive Fixes ──────────────────────── */
+@media (max-width: 768px) {
+  /* Reduce logo on mobile */
+  .nav-logo img { height: 52px; }
+
+  /* Section spacing */
+  #about, #techstack, #services, #projects, #connect, #feedback { padding: 64px 0; }
+  #education1 { padding: 0 0 64px; }
+
+  /* Container tighter */
+  .container { padding: 0 16px; }
+
+  /* Section subtitle full width */
+  .section-sub { max-width: 100%; margin-bottom: 32px; }
+}
+
+@media (max-width: 600px) {
+  /* Hero */
+  .hero-content {
+    margin: 0;
+    padding: calc(var(--nav-h) + 20px) 16px 72px;
+  }
+  .hero-img { object-position: 72% center; }
+  .hero-title { font-size: clamp(2.2rem, 11vw, 3.2rem); }
+  .hero-badge { font-size: .72rem; padding: 4px 12px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; padding: 13px 22px; }
+
+  /* About — keep badge inside the image wrap */
+  .about-img { aspect-ratio: 4/3; max-height: 280px; object-position: top; }
+  .about-img-badge { right: 8px; bottom: 8px; font-size: .78rem; padding: 8px 14px; }
+  .about-stats { gap: 18px; }
+  .stat-num { font-size: 1.9rem; }
+  .tab-btn { padding: 8px 16px; font-size: .85rem; }
+
+  /* Tech stack — 3 per row on small phones */
+  .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .tech-card { padding: 16px 10px; gap: 8px; }
+  .tech-icon { width: 42px; height: 42px; font-size: 20px; border-radius: 10px; }
+  .tech-name { font-size: .78rem; }
+  .tech-type { font-size: .65rem; }
+
+  /* Services */
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card { padding: 24px 20px; }
+
+  /* Projects — single column, no image overflow */
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-img-wrap { height: 180px; }
+  .project-body { padding: 18px 16px; }
+
+  /* Connect socials */
+  .socials { grid-template-columns: 1fr; }
+
+  /* Education cards */
+  .edu-cards { grid-template-columns: 1fr; }
+  .edu-hero { min-height: 36vh; }
+  .edu-hero-content { padding: 40px 16px; }
+
+  /* Feedback form */
+  .feedback-form { padding: 24px 16px; }
+  .form-field { min-width: 100%; }
+  .form-row { flex-direction: column; gap: 0; }
+
+  /* Toast wrapping fix */
+  .toast { white-space: normal; text-align: center; width: calc(100% - 40px); max-width: 340px; border-radius: 14px; }
+
+  /* Section titles */
+  .section-title { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+}
+
+@media (max-width: 380px) {
+  /* Very small phones */
+  .hero-title { font-size: 2rem; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-stats { flex-direction: column; gap: 12px; }
+  .nav-logo img { height: 44px; }
+}
