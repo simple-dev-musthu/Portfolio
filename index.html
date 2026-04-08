@@ -106,7 +106,6 @@
           <div class="tab-nav">
             <button class="tab-btn active-tab-btn" onclick="opentab('skills', this)">Skills</button>
             <button class="tab-btn" onclick="opentab('experience', this)">Experience</button>
-            <button class="tab-btn" onclick="opentab('education', this)">Education</button>
           </div>
           <div class="tab-panel active-panel" id="skills">
             <ul class="tab-list">
@@ -122,12 +121,6 @@
               <li><span class="tab-tag">Full Stack Intern — Algorythm Tech</span> — Interned as a Full Stack Developer; developed a cross-platform Native app called Employee Tracker</li>
             </ul>
           </div>
-          <div class="tab-panel" id="education">
-            <ul class="tab-list">
-              <li><span class="tab-tag">BCA — Yenepoya University</span> — 2023–Ongoing</li>
-              <li><span class="tab-tag">Full Stack Training</span> — Xybron Academy, 2023</li>
-              <li><span class="tab-tag">Higher Secondary</span> — GHSS Agatti, 2021–2023</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -495,7 +488,7 @@
           </a>
         </li>
         <li class="reveal-up" style="--delay:.16s">
-          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" class="social-card ig">
+          <a href="https://www.instagram.com/muhd.musthak?igsh=aDE5c2JsY29uNTk0" target="_blank" aria-label="Instagram" class="social-card ig">
             <i class="fa-brands fa-instagram"></i>
             <div class="social-text">
               <span class="social-name">Instagram</span>
@@ -503,15 +496,7 @@
             </div>
           </a>
         </li>
-        <li class="reveal-up" style="--delay:.24s">
-          <a href="https://x.com/" target="_blank" aria-label="X" class="social-card xc">
-            <i class="fa-brands fa-x-twitter"></i>
-            <div class="social-text">
-              <span class="social-name">X (Twitter)</span>
-              <small class="social-desc">Quick thoughts, tech threads, and product updates.</small>
-            </div>
-          </a>
-        </li>
+
         <li class="reveal-up" style="--delay:.32s">
           <a href="mailto:musthakk8281@gmail.com" aria-label="Email" class="social-card mail" onclick="copyEmail(event)">
             <i class="fa-solid fa-envelope"></i>
@@ -573,40 +558,78 @@
       <div class="section-label reveal-up">Say Hello</div>
       <h2 class="section-title reveal-up">Send <span>Feedback</span></h2>
       <p class="section-sub reveal-up">Share your thoughts — I read every message.</p>
-      <form id="feedbackForm" class="feedback-form reveal-up" novalidate>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="firstName">First name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="Muhammed" required autocomplete="given-name" />
-            <small class="error" aria-live="polite"></small>
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <div class="info-card">
+            <h3>Let's <span>collaborate</span></h3>
+            <p>I'm always open to discussing new projects, creative ideas, or opportunities moving forward.</p>
+            <ul class="contact-methods">
+              <li>
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <small>Email me at</small>
+                  <a href="mailto:musthakk8281@gmail.com">musthakk8281@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <div class="method-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="method-details">
+                  <small>LinkedIn</small>
+                  <a href="https://linkedin.com/in/muhammad-musthak-k-866542355/" target="_blank">Muhammad Musthak K</a>
+                </div>
+              </li>
+              <li>
+                <div class="method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="method-details">
+                  <small>Based in</small>
+                  <span>Lakshadweep / Kerala, India</span>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="form-field">
-            <label for="lastName">Last name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Musthak" required autocomplete="family-name" />
-            <small class="error" aria-live="polite"></small>
+          
+          <div class="availability-badge">
+            <span class="pulse-green"></span> Available for Hire
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-field full">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" />
-            <small class="error" aria-live="polite"></small>
-          </div>
+
+        <div class="contact-form-wrap reveal-up">
+          <form id="feedbackForm" class="feedback-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Muhammed" required autocomplete="given-name" />
+                <small class="error" aria-live="polite"></small>
+              </div>
+              <div class="form-field">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Musthak" required autocomplete="family-name" />
+                <small class="error" aria-live="polite"></small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field full">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email" />
+                <small class="error" aria-live="polite"></small>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                <small class="error" aria-live="polite"></small>
+              </div>
+            </div>
+            <button type="submit" class="btn-submit">
+              <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+              <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
+            </p>
+          </form>
         </div>
-        <div class="form-row">
-          <div class="form-field full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-            <small class="error" aria-live="polite"></small>
-          </div>
-        </div>
-        <button type="submit" class="btn-submit">
-          <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
-        </button>
-        <p id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
-          <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
-        </p>
-      </form>
+      </div>
     </div>
   </section>
 

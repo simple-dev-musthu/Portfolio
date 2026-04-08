@@ -112,14 +112,14 @@ Interactive contact form with:
    ```
 
 3. **Open in Browser**
-   - Simply open `Portfolio.html` in your web browser
+   - Simply open `index.html` in your web browser
    - Or use a live server for better experience
 
 ### File Structure
 ```
 Portfolio/
 │
-├── Portfolio.html      # Main HTML file
+├── index.html          # Main HTML file
 ├── Portfolio.css       # Stylesheet
 ├── README.md          # This file
 └── Pictures/          # Images folder (if needed)
@@ -216,7 +216,7 @@ Feel free to reach out to me through any of these channels:
 ### 💡 Fun Facts About This Portfolio:
 
 1. **🎨 Design Time**: 2+ weeks of careful planning and design
-2. **💻 Code Lines**: 350+ lines of clean, organized code
+2. **💻 Code Lines**: 2,200+ lines of clean, organized code
 3. **📱 Responsive**: Works perfectly on phones, tablets, and desktops
 4. **⚡ Speed**: Loads in under 2 seconds
 5. **🌐 Accessibility**: Screen reader friendly
